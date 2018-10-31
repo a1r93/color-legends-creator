@@ -4,7 +4,7 @@
       <ColorWheelContainer>
         Pick from wheel
         <SketchContainer>
-          <sketch-picker :value="selectedColor" @input="updateColor" />
+          <sketch-picker class="sketch-picker" :value="selectedColor" @input="updateColor" />
         </SketchContainer>
       </ColorWheelContainer>
     </Wrapper>
@@ -32,6 +32,9 @@ const SketchContainer = styled("div")`
   margin: auto;
   margin-top: 15px;
 `
+// const StyledSketchPicker = styled(sketch)`
+//   // width: 100% !important;
+// `
 
 export default {
   name: "ColorPicker",
@@ -57,3 +60,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.sketch-picker {
+  width: 100%;
+}
+</style>
